@@ -19,7 +19,7 @@ public class TiposDeCombustiveService {
         tiposDeCombustivelRepository.save(tiposDeCombustivel);
     }
 
-    public TiposDeCombustivelRepository buscarTiposDeCombustivelPorId(Long id) {
+    public TiposDeCombustivel buscarTiposDeCombustivelPorId(Long id) {
         return tiposDeCombustivelRepository.findById(id).orElseThrow(()-> new NullPointerException("Tipo de combustívelnão encontrado pelo id" + id));
                 
     }
