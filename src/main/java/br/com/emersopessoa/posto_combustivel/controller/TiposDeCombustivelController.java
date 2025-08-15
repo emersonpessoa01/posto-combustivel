@@ -26,7 +26,7 @@ public class TiposDeCombustivelController {
     }
     @GetMapping("/{id}")
     public ResponseEntity<TiposDeCombustivelRepository> buscarTiposDeCombustivelPorId(@PathVariable(name="id") Long id){
-        return ResponseEntity.ok(tiposDeCombustiveService.buscarTiposDeCombustivelPorId(id));
+        return ResponseEntity.ok((TiposDeCombustivelRepository) tiposDeCombustiveService.buscarTiposDeCombustivelPorId(id));
     }
     @PutMapping
     public ResponseEntity<Void>alterarTiposDeCombustivel(@RequestParam(name="id") Long id, @RequestBody TiposDeCombustivel tiposDeCombustivel){
